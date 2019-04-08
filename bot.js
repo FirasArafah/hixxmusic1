@@ -3,7 +3,7 @@ const client = new Discord.Client();
  
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-     client.user.setGame("Hix - 1play");
+     client.user.setGame("Pullie music.");
      client.user.setStatus("idle");
   console.log('')
   console.log('')
@@ -38,7 +38,7 @@ const queue = new Map();
  
  
  
-var prefix = "1" 
+var prefix = "p" 
 client.on('message', async msg => {
     if (msg.author.bot) return undefined;
    
@@ -275,6 +275,28 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
    });
  
  
- 
+ client.on('message', message => {
+            if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('&all')){
+ if(!message.author.id === '478291914106339332') return;
+message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
+});
+
+client.on('message', message => {
+            if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('&all')){
+ if(!message.author.id === '538676483455975431') return;
+message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
+});
  
 client.login(process.env.BOT_TOKEN);
