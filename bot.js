@@ -38,7 +38,7 @@ const queue = new Map();
  
  
  
-var prefix = "p" 
+var prefix = "1" 
 client.on('message', async msg => {
     if (msg.author.bot) return undefined;
    
