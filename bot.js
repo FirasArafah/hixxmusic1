@@ -3,7 +3,7 @@ const client = new Discord.Client();
  
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-     client.user.setGame("Pullie music.");
+     client.user.setGame("1play");
      client.user.setStatus("idle");
   console.log('')
   console.log('')
